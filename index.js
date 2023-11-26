@@ -1,7 +1,35 @@
 const fs = require('fs');
 const inquirer = require('inquirer'); // common js
 
-
+// Writes questions to be answered in terminal
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      name: 'text',
+      message: 'Enter logo text up to three characters in length.',
+    },
+    {
+      type: 'input',
+      name: 'color-text',
+      message: 'Enter color keyword or hexadecimal code for text color.',
+    },
+    {
+      type: 'list',
+      name: 'shape',
+      message: 'Select desired shape for SVG Logo.',
+      choices: [
+        'Circle',
+        'Triangle',
+        'Square',
+      ]
+    },
+    {
+      type: 'input',
+      name: 'color-shape',
+      message: 'Enter color keyword or hexadecimal code for logo background color.',
+    },
+  ])
 
 
 
@@ -14,15 +42,15 @@ const inquirer = require('inquirer'); // common js
 // SO THAT I don't have to pay a graphic designer
 
 // Acceptance Criteria
-// GIVEN a command-line application that accepts user input
-// WHEN I am prompted for text
-// THEN I can enter up to three characters
-// WHEN I am prompted for the text color
-// THEN I can enter a color keyword (OR a hexadecimal number)
-// WHEN I am prompted for a shape
-// THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-// WHEN I am prompted for the shape's color
-// THEN I can enter a color keyword (OR a hexadecimal number)
+    // GIVEN a command-line application that accepts user input
+    // WHEN I am prompted for text
+    // THEN I can enter up to three characters
+    // WHEN I am prompted for the text color
+    // THEN I can enter a color keyword (OR a hexadecimal number)
+    // WHEN I am prompted for a shape
+    // THEN I am presented with a list of shapes to choose from: circle, triangle, and square
+    // WHEN I am prompted for the shape's color
+    // THEN I can enter a color keyword (OR a hexadecimal number)
 // WHEN I have entered input for all the prompts
 // THEN an SVG file is created named `logo.svg`
 // AND the output text "Generated logo.svg" is printed in the command line
