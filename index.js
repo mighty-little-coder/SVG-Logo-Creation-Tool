@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer'); // common js
+const {Circle, Square, Triangle} = require("./lib/shapes");
 
 // Writes questions to be answered in terminal
 inquirer
@@ -31,6 +32,11 @@ inquirer
     },
   ])
 
+  .then((svgBuilder) => {
+    const filename = `logo.svg`;
+    const svg = 
+    ``
+  })
 
 
 
