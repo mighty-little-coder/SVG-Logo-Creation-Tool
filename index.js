@@ -58,6 +58,7 @@ inquirer
   // Builds SVG from user input
   .then((svgBuilder) => {
     const filename = `logo.svg`;
+    const svgCall = new SVGInput();
     const svg =
       `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
       ${SVGInput.svgTextInput}
@@ -66,7 +67,7 @@ inquirer
 
     // Writes new SVG file
     fs.writeFile(filename, svg, (err) =>
-      err ? console.log(err) : console.log('Successfully created a scalable logo in logo.svg file'))
+      err ? console.log('Please check inputs, could not create log.scg file', err) : console.log('Successfully created a scalable logo in a logo.svg file'))
   })
 
 
@@ -89,9 +90,9 @@ inquirer
 //// THEN I am presented with a list of shapes to choose from: circle, triangle, and square
 //// WHEN I am prompted for the shape's color
 //// THEN I can enter a color keyword (OR a hexadecimal number)
-// WHEN I have entered input for all the prompts
-// THEN an SVG file is created named `logo.svg`
-// AND the output text "Generated logo.svg" is printed in the command line
+//// WHEN I have entered input for all the prompts
+//// THEN an SVG file is created named `logo.svg`
+//// AND the output text "Generated logo.svg" is printed in the command line
 // WHEN I open the `logo.svg` file in a browser
 // THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
@@ -102,6 +103,8 @@ inquirer
 // const shape = new Triangle();
 // shape.setColor("blue");
 // expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
+
+
 
 
 //<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
