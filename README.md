@@ -28,12 +28,13 @@
   To view the finished product, .clone the repository from my GitHub repository at this <a href="https://github.com/mighty-little-coder/SVG-Logo-Creation-Tool">link!</a>
   
   In order to utilize this application, execute the command node [current file.file type] in your terminal, replacing [current file.file type] with the appropriate file name and type. For instance, the command may look like: node index.js.<br>This will generate prompt for you to answer. Once your response is satisfactory, press enter to move onto the next prompt.<br>After the final prompt, a console log will display indicating success or an error. If successful, a 'logo.svg' file will be generated and can be located in the current directory. Right click on the 'logo.svg' file and select "Preview SVG" to view the document.<br>Verify information is correct.<br>Your Logo has been created for you project.
-  ![Screenshot / Video of deployed project](./images/project-screenshot1.png)
-  
+  ![SVG Logo generated code](images/SVG-logo-generatedcode-image.png)
+  ![SVG Logo Preview](images/SVG-logo-preview-image.png)
+
   
   ## Credits
   
-  <li>UCONN Full Stack Flex Coding Program - Instructor: Mia Ciasullo</li><li>UCONN Full Stack Flex Coding Program - Instructor: Lee Warrick</li><li>UCONN Full Stack Flex Coding Program - Student: <a href="https://github.com/samanthashleyrose">Samantha Ashley Rose</a> </li>
+  <li>UCONN Full Stack Flex Coding Program - Instructor: Mia Ciasullo</li><li>UCONN Full Stack Flex Coding Program - Instructor: Lee Warrick</li><li>UCONN Full Stack Flex Coding Program - Student: <a href="https://github.com/samanthashleyrose">Samantha Ashley Rose</a> </li><li><a href="https://chat.openai.com/">Chat GPT 3.5</a></li><li>UCONN Full Stack Flex Coding Program - Tutor:<a href="https://github.com/androosk"> ANDREW TIRPOK</a></li><li>Youtube Tutorial Page - <a href="https://www.youtube.com/watch?v=GJYMcLus3v0">THOSCALLE</a></li>
   
   
   ## Features
