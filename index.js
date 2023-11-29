@@ -20,7 +20,7 @@ class SVGInput {
   }
 
   svgShapeInput(shape) {
-    this.shapeInput = this.render();
+    this.shapeInput = shape.render();
   }
 };
 
@@ -58,27 +58,19 @@ inquirer
   // Builds SVG from user input
   .then((svgBuilder) => {
     const filename = `logo.svg`;
-    const svgCall = new SVGInput();
-    const svg =
+    const svgCall = 
       `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-      ${SVGInput.svgTextInput}
-      ${SVGInput.svgShapeInput}
+      ${svgBuilder.svgTextInput}
+      ${svgBuilder.svgShapeInput}
   </svg>`
 
     // Writes new SVG file
-    fs.writeFile(filename, svg, (err) =>
+    fs.writeFile(filename, svgCall, (err) =>
       err ? console.log('Please check inputs, could not create log.scg file', err) : console.log('Successfully created a scalable logo in a logo.svg file'))
   })
 
 
 
-
-// node index.js
-
-// User Story
-// AS a freelance web developer
-// I WANT to generate a simple logo for my projects
-// SO THAT I don't have to pay a graphic designer
 
 //// Acceptance Criteria
 //// GIVEN a command-line application that accepts user input
@@ -113,3 +105,23 @@ inquirer
 // <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
 // <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
 // <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180" stroke="green" fill="transparent" stroke-width="5"/>
+
+
+
+
+
+
+
+// .then((svgBuilder) => {
+//   const filename = `logo.svg`;
+//   const svgCall = new SVGInput();
+//   const svg =
+//     `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+//     ${SVGInput.svgTextInput}
+//     ${SVGInput.svgShapeInput}
+// </svg>`
+
+//   // Writes new SVG file
+//   fs.writeFile(filename, svg, (err) =>
+//     err ? console.log('Please check inputs, could not create log.scg file', err) : console.log('Successfully created a scalable logo in a logo.svg file'))
+// })
